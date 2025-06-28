@@ -4,7 +4,7 @@ import subcategory from './subcategory'
 import audience from './audience'
 import collection from './collection'
 import vendor from './vendor'
-import variant from './variant'
+
 
 
 export const schemaTypes = [
@@ -14,6 +14,6 @@ export const schemaTypes = [
   audience,
   collection,
   vendor,
-  variant,
+
   
 ]
