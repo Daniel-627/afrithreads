@@ -5,7 +5,7 @@ import audience from './audience'
 import collection from './collection'
 import vendor from './vendor'
 import variant from './variant'
-import blockContent from './blockContent'
+
 
 export const schemaTypes = [
   product,
@@ -15,5 +15,5 @@ export const schemaTypes = [
   collection,
   vendor,
   variant,
-  blockContent,
+  
 ]
