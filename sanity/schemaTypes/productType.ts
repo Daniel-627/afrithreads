@@ -90,8 +90,12 @@ export const productType = defineType({
       name: 'variants',
       title: 'Variants',
       type: 'array',
-      of: [{ type: 'variant' }],
-    }),
+      of: [
+        defineArrayMember({
+          type: 'variant',
+        }),
+      ],
+    }),    
     defineField({
       name: 'body',
       title: 'Product Description',

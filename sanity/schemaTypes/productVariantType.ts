@@ -1,7 +1,7 @@
 import {PackageIcon} from '@sanity/icons'
 import {defineType, defineField, defineArrayMember} from 'sanity'
 
-export const variantType = defineType({
+export const productVariantType = defineType({
   name: 'variant',
   title: 'Variant',
   type: 'object',
@@ -77,8 +77,8 @@ export const variantType = defineType({
     }),
     defineField({
       name: 'barcode',
-      title: 'Bar code',
-      type: 'barcode', // Make sure the 'barcode' schema/type is defined or installed
+      title: 'Barcode',
+      type: 'string', // Optional fallback if you don't have a custom 'barcode' type
     }),
   ],
   preview: {
