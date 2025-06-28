@@ -1,19 +1,15 @@
-import product from './product'
-import category from './category'
-import subcategory from './subcategory'
-import audience from './audience'
-import collection from './collection'
-import vendor from './vendor'
-
-
+import {productType} from './productType'
+import {categoryType} from './categoryType'
+import {subcategoryType} from './subcategoryType'
+import {audienceType} from './audienceType'
+import {collectionType} from './collectionType'
+import {vendorType} from './vendorType'
 
 export const schemaTypes = [
-  product,
-  category,
-  subcategory,
-  audience,
-  collection,
-  vendor,
-
-  
+  productType,
+  categoryType,
+  subcategoryType,
+  audienceType,
+  collectionType,
+  vendorType,
 ]
