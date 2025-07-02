@@ -18,31 +18,37 @@ export const productVariantType = defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
-      name: 'size',
-      title: 'Size',
-      type: 'string',
+      name: 'sizes',
+      title: 'Available Sizes',
+      type: 'array',
+      of: [{ type: 'string' }],
       options: {
         list: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        layout: 'dropdown',
+        layout: 'tags', // Allows multiple + custom values
       },
-      validation: Rule => Rule.required(),
+      validation: Rule => Rule.min(1),
     }),
     defineField({
-      name: 'color',
-      title: 'Color',
-      type: 'string',
-      validation: Rule => Rule.required(),
+      name: 'colors',
+      title: 'Available Colors',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags', // Allows multiple + custom values
+      },
+      validation: Rule => Rule.min(1),
     }),
   ],
   preview: {
     select: {
-      title: 'color',
-      subtitle: 'size',
+      title: 'sizeType',
+      subtitle: 'sizes',
     },
     prepare({ title, subtitle }) {
+      const subtitleText = Array.isArray(subtitle) ? subtitle.join(', ') : subtitle;
       return {
-        title: `Color: ${title}`,
-        subtitle: `Size: ${subtitle}`,
+        title: `System: ${title}`,
+        subtitle: `Sizes: ${subtitleText}`,
       };
     },
   },
