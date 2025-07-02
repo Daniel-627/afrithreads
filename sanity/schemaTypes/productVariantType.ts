@@ -9,13 +9,14 @@ export const productVariantType = defineType({
   fields: [
     defineField({
       name: 'sizeType',
-      title: 'Sizing System',
-      type: 'string',
+      title: 'Sizing Systems',
+      type: 'array',
+      of: [{ type: 'string' }],
       options: {
         list: ['US', 'UK', 'EU', 'INT'],
-        layout: 'dropdown',
+        layout: 'tags', // multi-select + custom values
       },
-      validation: Rule => Rule.required(),
+      validation: Rule => Rule.min(1),
     }),
     defineField({
       name: 'sizes',
@@ -24,7 +25,7 @@ export const productVariantType = defineType({
       of: [{ type: 'string' }],
       options: {
         list: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        layout: 'tags', // Allows multiple + custom values
+        layout: 'tags', // multi-select + custom values
       },
       validation: Rule => Rule.min(1),
     }),
@@ -34,7 +35,7 @@ export const productVariantType = defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: {
-        layout: 'tags', // Allows multiple + custom values
+        layout: 'tags', // multi-select + custom values
       },
       validation: Rule => Rule.min(1),
     }),
@@ -45,9 +46,10 @@ export const productVariantType = defineType({
       subtitle: 'sizes',
     },
     prepare({ title, subtitle }) {
+      const titleText = Array.isArray(title) ? title.join(', ') : title;
       const subtitleText = Array.isArray(subtitle) ? subtitle.join(', ') : subtitle;
       return {
-        title: `System: ${title}`,
+        title: `Systems: ${titleText}`,
         subtitle: `Sizes: ${subtitleText}`,
       };
     },
