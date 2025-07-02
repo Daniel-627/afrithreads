@@ -13,10 +13,8 @@ export const productVariantType = defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: {
-        list: ['US', 'UK', 'EU', 'INT'],
-        layout: 'tags', // multi-select + custom values
+        layout: 'tags', // Just tag input, no dropdown
       },
-      validation: Rule => Rule.min(1),
     }),
     defineField({
       name: 'sizes',
@@ -24,10 +22,8 @@ export const productVariantType = defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: {
-        list: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-        layout: 'tags', // multi-select + custom values
+        layout: 'tags',
       },
-      validation: Rule => Rule.min(1),
     }),
     defineField({
       name: 'colors',
@@ -35,9 +31,8 @@ export const productVariantType = defineType({
       type: 'array',
       of: [{ type: 'string' }],
       options: {
-        layout: 'tags', // multi-select + custom values
+        layout: 'tags',
       },
-      validation: Rule => Rule.min(1),
     }),
   ],
   preview: {
