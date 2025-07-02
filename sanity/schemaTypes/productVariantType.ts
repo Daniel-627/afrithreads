@@ -1,5 +1,5 @@
-import {PackageIcon} from '@sanity/icons'
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import { PackageIcon } from '@sanity/icons';
+import { defineType, defineField } from 'sanity';
 
 export const productVariantType = defineType({
   name: 'variant',
@@ -8,44 +8,14 @@ export const productVariantType = defineType({
   icon: PackageIcon,
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'sizeType',
+      title: 'Sizing System',
       type: 'string',
+      options: {
+        list: ['US', 'UK', 'EU', 'INT'],
+        layout: 'dropdown',
+      },
       validation: Rule => Rule.required(),
-    }),
-    defineField({
-      name: 'grams',
-      title: 'Weight in grams',
-      type: 'number',
-    }),
-    defineField({
-      name: 'price',
-      title: 'Price (KES)',
-      type: 'number',
-      validation: Rule => Rule.required().positive(),
-    }),
-    defineField({
-      name: 'sku',
-      title: 'SKU',
-      type: 'string',
-    }),
-    defineField({
-      name: 'taxable',
-      title: 'Taxable',
-      type: 'boolean',
-      initialValue: true,
-    }),
-    defineField({
-      name: 'stock',
-      title: 'Stock',
-      type: 'number',
-      validation: Rule => Rule.min(0),
-    }),
-    defineField({
-      name: 'isAvailable',
-      title: 'Available?',
-      type: 'boolean',
-      initialValue: true,
     }),
     defineField({
       name: 'size',
@@ -55,37 +25,25 @@ export const productVariantType = defineType({
         list: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
         layout: 'dropdown',
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'color',
       title: 'Color',
       type: 'string',
-    }),
-    defineField({
-      name: 'images',
-      title: 'Images',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'image',
-          options: { hotspot: true },
-        }),
-      ],
-      options: {
-        layout: 'grid',
-      },
-    }),
-    defineField({
-      name: 'barcode',
-      title: 'Barcode',
-      type: 'string', // Optional fallback if you don't have a custom 'barcode' type
+      validation: Rule => Rule.required(),
     }),
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'color',
       subtitle: 'size',
-      media: 'images.0',
+    },
+    prepare({ title, subtitle }) {
+      return {
+        title: `Color: ${title}`,
+        subtitle: `Size: ${subtitle}`,
+      };
     },
   },
-})
+});
