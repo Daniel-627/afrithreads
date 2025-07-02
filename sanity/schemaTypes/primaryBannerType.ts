@@ -1,11 +1,11 @@
 import { defineType, defineField } from 'sanity'
-import { MegaphoneIcon } from '@sanity/icons'
+import { MobileDeviceIcon } from '@sanity/icons'
 
 export const primaryBannerType = defineType({
   name: 'primaryBanner',
   title: 'Primary Banner',
   type: 'document',
-  icon: MegaphoneIcon,
+  icon: MobileDeviceIcon,
   fields: [
     defineField({
       name: 'title',
