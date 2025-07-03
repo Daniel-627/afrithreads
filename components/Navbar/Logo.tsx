@@ -1,9 +1,9 @@
-import React from 'react'
+import Link from 'next/link'
 
-type Props = {}
-
-export default function Logo({}: Props) {
+export default function Logo() {
   return (
-    <div>Logo</div>
+    <Link href="/" className="text-xl font-bold tracking-wide text-black">
+      AfriThreads
+    </Link>
   )
 }

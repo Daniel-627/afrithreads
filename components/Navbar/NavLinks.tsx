@@ -1,9 +1,26 @@
-import React from 'react'
+'use client'
 
-type Props = {}
+import Link from 'next/link'
 
-export default function NavLinks({}: Props) {
+const links = [
+  { href: '/shop', label: 'Shop' },
+  { href: '/collections', label: 'Collections' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+]
+
+export default function NavLinks() {
   return (
-    <div>NavLinks</div>
+    <>
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className="text-gray-700 hover:text-red-500 font-medium transition-colors"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </>
   )
 }
