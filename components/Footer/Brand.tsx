@@ -6,7 +6,7 @@ export default function Brand() {
       <Link href="/" className="text-2xl font-bold tracking-wide text-white">
         AfriThreads
       </Link>
-      <p className="mt-2 text-sm text-gray-400">
+      <p className="mt-2 text-sm text-gray-950">
         Crafted with love. Worn with pride.
       </p>
     </div>
