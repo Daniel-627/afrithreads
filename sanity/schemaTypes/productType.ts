@@ -95,6 +95,33 @@ export const productType = defineType({
           type: 'variant',
         }),
       ],
+    }),
+    defineField({
+      name: 'sizeType',
+      title: 'Sizing Systems',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags', // Just tag input, no dropdown
+      },
+    }),
+    defineField({
+      name: 'sizes',
+      title: 'Available Sizes',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
+    }),
+    defineField({
+      name: 'colors',
+      title: 'Available Colors',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        layout: 'tags',
+      },
     }),    
     defineField({
       name: 'body',
