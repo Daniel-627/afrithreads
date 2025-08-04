@@ -6,10 +6,12 @@ import {collectionType} from './collectionType'
 import {vendorType} from './vendorType'
 import {blockContentType} from './blockContentType'
 import {productVariantType} from './productVariantType'
-import { primaryBannerType } from './primaryBannerType'
-import { secondaryBannerType } from './secondaryBannerType'
 import { miniBannerType } from './miniBannerType'
 import { seoType } from './seoType'
+import { heroBannerType } from './heroBannerType'
+import { promoBannerType } from './promobannerType'
+import { eventBannerType } from './eventBannerType'
+import { storyBannerType } from './storyBannerType'
 
 export const schemaTypes = [
   productType,
@@ -20,8 +22,10 @@ export const schemaTypes = [
   vendorType,
   blockContentType,
   productVariantType,
-  primaryBannerType,
-  secondaryBannerType,
+  heroBannerType,
+  promoBannerType,
   miniBannerType,
+  storyBannerType,
+  eventBannerType,
   seoType
 ]

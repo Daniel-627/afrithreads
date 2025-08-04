@@ -217,3 +217,75 @@ export const getVendorBySlugQuery = (slug: string) => `
   }
 `;
 
+
+//Banner Queries   
+
+
+export const getHeroBannersQuery = `*[_type == "heroBanner" && startDate <= now() && endDate >= now()] | order(startDate desc){
+  _id,
+  title,
+  description,
+  image,
+  ctaLabel,
+  ctaLink,
+  countdownEnabled,
+  countdownTarget
+}`;
+
+
+export const getPromoBannersQuery = `*[_type == "promoBanner" && startDate <= now() && endDate >= now()] | order(startDate desc){
+  _id,
+  title,
+  description,
+  image,
+  ctaLabel,
+  ctaLink,
+  countdownEnabled,
+  countdownTarget
+}`;
+
+
+export const getMiniBannersQuery = `*[_type == "miniBanner"] | order(_createdAt desc){
+  _id,
+  title,
+  image,
+  ctaLink
+}`;
+
+
+export const getStoryBannersQuery = `*[_type == "storyBanner"] | order(_createdAt desc){
+  _id,
+  title,
+  storyText,
+  image,
+  ctaLabel,
+  ctaLink
+}`;
+
+
+export const getEventBannersQuery = `*[_type == "eventBanner" && eventDate >= now()] | order(eventDate asc){
+  _id,
+  title,
+  description,
+  image,
+  eventDate,
+  countdownEnabled,
+  showAsPopup,
+  ctaLabel,
+  ctaLink
+}`;
+
+
+export const getCountdownBannersQuery = `*[
+  (_type == "heroBanner" || _type == "promoBanner" || _type == "eventBanner")
+  && countdownEnabled == true
+  && countdownTarget >= now()
+]{
+  _id,
+  _type,
+  title,
+  countdownTarget,
+  image,
+  ctaLabel,
+  ctaLink
+}`;

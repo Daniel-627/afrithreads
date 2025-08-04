@@ -1,54 +1,19 @@
-import { defineType, defineField } from 'sanity'
-import { SparklesIcon } from '@sanity/icons'
+import { DocumentIcon } from '@sanity/icons';
+import { defineType, defineField } from 'sanity';
 
 export const miniBannerType = defineType({
   name: 'miniBanner',
   title: 'Mini Banner',
   type: 'document',
-  icon: SparklesIcon,
+  icon: DocumentIcon,
   fields: [
+    defineField({ name: 'title', title: 'Title', type: 'string' }),
     defineField({
-      name: 'message',
-      title: 'Banner Message',
-      type: 'string',
-      validation: Rule => Rule.required(),
+      name: 'image',
+      title: 'Mini Banner Image',
+      type: 'image',
+      options: { hotspot: true },
     }),
-    defineField({
-      name: 'link',
-      title: 'Optional Link',
-      type: 'url',
-    }),
-    defineField({
-      name: 'isActive',
-      title: 'Display Banner?',
-      type: 'boolean',
-      initialValue: true,
-    }),
-    defineField({
-      name: 'startDate',
-      title: 'Start Date (optional)',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'endDate',
-      title: 'End Date (optional)',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'backgroundColor',
-      title: 'Background Color (Optional)',
-      type: 'string',
-    }),
-    defineField({
-      name: 'textColor',
-      title: 'Text Color (Optional)',
-      type: 'string',
-    }),
+    defineField({ name: 'ctaLink', title: 'Link to', type: 'url' }),
   ],
-  preview: {
-    select: {
-      title: 'message',
-      subtitle: 'link',
-    },
-  },
-})
+});
