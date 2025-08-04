@@ -1,5 +1,5 @@
-import {SparklesIcon} from '@sanity/icons'
-import {defineType, defineField} from 'sanity'
+import { SparklesIcon } from '@sanity/icons';
+import { defineType, defineField } from 'sanity';
 
 export const collectionType = defineType({
   name: 'collection',
@@ -11,35 +11,32 @@ export const collectionType = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required().min(2),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-      },
+      options: { source: 'title', maxLength: 96 },
+      validation: Rule => Rule.required(),
     }),
     defineField({
-      name: 'season',
-      title: 'Season',
-      type: 'string',
+      name: 'image',
+      title: 'Collection Image',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Used for promotional grids or banners.',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    }),
-    defineField({
-      name: 'launchDate',
-      title: 'Launch Date',
-      type: 'datetime',
+      name: 'seo',
+      title: 'SEO & Meta',
+      type: 'seo',
     }),
   ],
   preview: {
     select: {
       title: 'title',
-      subtitle: 'season',
+      media: 'image',
     },
   },
-})
+});

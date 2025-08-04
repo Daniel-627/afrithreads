@@ -1,5 +1,5 @@
-import {FolderIcon} from '@sanity/icons'
-import {defineType, defineField} from 'sanity'
+import { FolderIcon } from '@sanity/icons';
+import { defineType, defineField } from 'sanity';
 
 export const categoryType = defineType({
   name: 'category',
@@ -11,25 +11,32 @@ export const categoryType = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required().min(2),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      options: { source: 'title', maxLength: 96 },
+      validation: Rule => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Category thumbnail or banner.',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO & Meta',
+      type: 'seo',
     }),
   ],
   preview: {
     select: {
       title: 'title',
+      media: 'image',
     },
   },
-})
+});

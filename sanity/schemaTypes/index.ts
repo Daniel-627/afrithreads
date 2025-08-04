@@ -9,6 +9,7 @@ import {productVariantType} from './productVariantType'
 import { primaryBannerType } from './primaryBannerType'
 import { secondaryBannerType } from './secondaryBannerType'
 import { miniBannerType } from './miniBannerType'
+import { seoType } from './seoType'
 
 export const schemaTypes = [
   productType,
@@ -22,4 +23,5 @@ export const schemaTypes = [
   primaryBannerType,
   secondaryBannerType,
   miniBannerType,
+  seoType
 ]

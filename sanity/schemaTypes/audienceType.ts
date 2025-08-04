@@ -1,34 +1,42 @@
-import {TagIcon} from '@sanity/icons' // optional, for UI flair
-import {defineField, defineType} from 'sanity'
+import { UsersIcon } from '@sanity/icons';
+import { defineType, defineField } from 'sanity';
 
 export const audienceType = defineType({
   name: 'audience',
   title: 'Target Audience',
   type: 'document',
-  icon: TagIcon,
+  icon: UsersIcon,
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'label',
+      title: 'Label',
       type: 'string',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-      },
+      options: { source: 'label', maxLength: 96 },
+      validation: Rule => Rule.required(),
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'image',
+      title: 'Audience Image',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Optional — used in filters or promos.',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO & Meta',
+      type: 'seo',
     }),
   ],
   preview: {
     select: {
-      title: 'title',
+      title: 'label',
+      media: 'image',
     },
   },
-})
+});

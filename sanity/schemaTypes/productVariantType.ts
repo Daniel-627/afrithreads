@@ -3,49 +3,73 @@ import { defineType, defineField } from 'sanity';
 
 export const productVariantType = defineType({
   name: 'variant',
-  title: 'Variant',
+  title: 'Product Variant',
   type: 'object',
   icon: PackageIcon,
   fields: [
     defineField({
+      name: 'sku',
+      title: 'SKU (optional)',
+      type: 'string',
+      description: 'Unique code for internal tracking or fulfillment systems.',
+    }),
+    defineField({
+      name: 'price',
+      title: 'Price (KES)',
+      type: 'number',
+      validation: Rule => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'stock',
+      title: 'Stock Quantity',
+      type: 'number',
+      validation: Rule => Rule.min(0),
+    }),
+    defineField({
       name: 'sizeType',
-      title: 'Sizing Systems',
-      type: 'array',
-      of: [{ type: 'string' }],
+      title: 'Size System',
+      type: 'string',
       options: {
-        layout: 'tags', // Just tag input, no dropdown
+        list: ['US', 'UK', 'EU', 'One Size'],
+        layout: 'dropdown',
       },
     }),
     defineField({
-      name: 'sizes',
-      title: 'Available Sizes',
-      type: 'array',
-      of: [{ type: 'string' }],
+      name: 'size',
+      title: 'Size',
+      type: 'string',
+    }),
+    defineField({
+      name: 'color',
+      title: 'Color',
+      type: 'string',
+    }),
+    defineField({
+      name: 'image',
+      title: 'Variant Image',
+      type: 'image',
       options: {
-        layout: 'tags',
+        hotspot: true,
       },
     }),
     defineField({
-      name: 'colors',
-      title: 'Available Colors',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags',
-      },
+      name: 'notes',
+      title: 'Notes (Optional)',
+      type: 'string',
+      description: 'Internal notes, e.g., "limited batch", "runs small".',
     }),
   ],
   preview: {
     select: {
-      title: 'sizeType',
-      subtitle: 'sizes',
+      title: 'sku',
+      subtitle: 'color',
+      media: 'image',
     },
-    prepare({ title, subtitle }) {
-      const titleText = Array.isArray(title) ? title.join(', ') : title;
-      const subtitleText = Array.isArray(subtitle) ? subtitle.join(', ') : subtitle;
+    prepare({ title, subtitle, media }) {
       return {
-        title: `Systems: ${titleText}`,
-        subtitle: `Sizes: ${subtitleText}`,
+        title: title || 'Unnamed Variant',
+        subtitle: subtitle ? `Color: ${subtitle}` : 'No color specified',
+        media,
       };
     },
   },

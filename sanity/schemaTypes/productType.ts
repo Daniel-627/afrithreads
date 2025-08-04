@@ -1,5 +1,5 @@
-import {TagIcon} from '@sanity/icons'
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import { TagIcon } from '@sanity/icons'
+import { defineType, defineField, defineArrayMember } from 'sanity'
 
 export const productType = defineType({
   name: 'product',
@@ -24,10 +24,26 @@ export const productType = defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: 'status',
+      title: 'Status',
+      type: 'string',
+      options: {
+        list: ['Draft', 'Published', 'Archived'],
+        layout: 'dropdown',
+      },
+      initialValue: 'Draft',
+    }),
+    defineField({
       name: 'price',
       title: 'Base Price (KES)',
       type: 'number',
       validation: Rule => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'priceMax',
+      title: 'Max Price (if variants)',
+      type: 'number',
+      description: 'Used for price filtering when product has multiple variants.',
     }),
     defineField({
       name: 'stock',
@@ -35,12 +51,34 @@ export const productType = defineType({
       type: 'number',
       validation: Rule => Rule.min(0),
     }),
+
+    // 🔖 Promotional Flags
     defineField({
       name: 'featured',
-      title: 'Featured?',
+      title: 'Featured Product?',
       type: 'boolean',
       initialValue: false,
     }),
+    defineField({
+      name: 'bestSeller',
+      title: 'Best Seller?',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'newArrival',
+      title: 'New Arrival?',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'popular',
+      title: 'Popular Product?',
+      type: 'boolean',
+      initialValue: false,
+    }),
+
+    // 📸 Media
     defineField({
       name: 'images',
       title: 'Product Images',
@@ -54,7 +92,10 @@ export const productType = defineType({
       options: {
         layout: 'grid',
       },
+      validation: Rule => Rule.min(1),
     }),
+
+    // 🔗 Relationships
     defineField({
       name: 'category',
       title: 'Category',
@@ -71,8 +112,12 @@ export const productType = defineType({
     defineField({
       name: 'audience',
       title: 'Target Audience',
-      type: 'reference',
-      to: [{ type: 'audience' }],
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: ['Men', 'Women', 'Kids', 'Unisex'],
+        layout: 'tags',
+      },
     }),
     defineField({
       name: 'collection',
@@ -86,6 +131,8 @@ export const productType = defineType({
       type: 'reference',
       to: [{ type: 'vendor' }],
     }),
+
+    // 🔄 Variants
     defineField({
       name: 'variants',
       title: 'Variants',
@@ -95,38 +142,31 @@ export const productType = defineType({
           type: 'variant',
         }),
       ],
+      validation: Rule => Rule.min(1),
     }),
+
+    // ✏️ Descriptions & Tags
     defineField({
-      name: 'sizeType',
-      title: 'Sizing Systems',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags', // Just tag input, no dropdown
-      },
-    }),
-    defineField({
-      name: 'sizes',
-      title: 'Available Sizes',
+      name: 'tags',
+      title: 'Tags',
       type: 'array',
       of: [{ type: 'string' }],
       options: {
         layout: 'tags',
       },
     }),
-    defineField({
-      name: 'colors',
-      title: 'Available Colors',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags',
-      },
-    }),    
     defineField({
       name: 'body',
       title: 'Product Description',
       type: 'blockContent',
+      validation: Rule => Rule.required(),
+    }),
+
+    // 🌐 SEO (optional)
+    defineField({
+      name: 'seo',
+      title: 'SEO & Meta',
+      type: 'seo', // Assuming you’ll define a custom object type for this
     }),
   ],
   preview: {
