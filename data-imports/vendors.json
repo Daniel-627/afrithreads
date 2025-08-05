@@ -1,0 +1,212 @@
+[
+  {
+    "_type": "vendor",
+    "_id": "vendor-1",
+    "name": "Martin LLC",
+    "description": "Triple-buffered transitional architecture",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-1"
+      }
+    },
+    "website": "http://strong.org/",
+    "email": "thoward@case.info",
+    "phone": "040.218.6373x788",
+    "socials": {
+      "instagram": "https://instagram.com/yjackson",
+      "facebook": "https://facebook.com/gsanders",
+      "twitter": "https://twitter.com/timothy25"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-2",
+    "name": "Schroeder Ltd",
+    "description": "Ameliorated client-server orchestration",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-2"
+      }
+    },
+    "website": "https://huang.biz/",
+    "email": "deborah02@smith-jones.net",
+    "phone": "5041182676",
+    "socials": {
+      "instagram": "https://instagram.com/drosales",
+      "facebook": "https://facebook.com/kennethholden",
+      "twitter": "https://twitter.com/hayesdennis"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-3",
+    "name": "Young, Baxter and Taylor",
+    "description": "Synchronized needs-based functionalities",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-3"
+      }
+    },
+    "website": "http://campbell-bryan.com/",
+    "email": "ruizlogan@nelson.com",
+    "phone": "248.755.2150x52823",
+    "socials": {
+      "instagram": "https://instagram.com/cookekristin",
+      "facebook": "https://facebook.com/ericmelendez",
+      "twitter": "https://twitter.com/kbrown"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-4",
+    "name": "Hurst LLC",
+    "description": "Down-sized actuating contingency",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-4"
+      }
+    },
+    "website": "http://www.boyd.org/",
+    "email": "robinvargas@gonzalez.com",
+    "phone": "483.534.4871x148",
+    "socials": {
+      "instagram": "https://instagram.com/nancy38",
+      "facebook": "https://facebook.com/michaelhuber",
+      "twitter": "https://twitter.com/charles43"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-5",
+    "name": "Wyatt, Butler and Freeman",
+    "description": "Fully-configurable holistic implementation",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-5"
+      }
+    },
+    "website": "http://simmons.biz/",
+    "email": "vchang@johnson-wright.info",
+    "phone": "(479)041-5086x08165",
+    "socials": {
+      "instagram": "https://instagram.com/mcdonaldjohn",
+      "facebook": "https://facebook.com/carsonkaitlin",
+      "twitter": "https://twitter.com/morgankaren"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-6",
+    "name": "Arnold Group",
+    "description": "Monitored motivating middleware",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-6"
+      }
+    },
+    "website": "http://mahoney.com/",
+    "email": "courtneyadams@spencer-jacobs.com",
+    "phone": "310.651.9555x4485",
+    "socials": {
+      "instagram": "https://instagram.com/alexcampos",
+      "facebook": "https://facebook.com/mathismichael",
+      "twitter": "https://twitter.com/hrivera"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-7",
+    "name": "Gutierrez-Bauer",
+    "description": "Cloned radical monitoring",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-7"
+      }
+    },
+    "website": "https://www.chapman.net/",
+    "email": "littlemary@blackwell.com",
+    "phone": "001-910-299-3623x46614",
+    "socials": {
+      "instagram": "https://instagram.com/daniel18",
+      "facebook": "https://facebook.com/timothy04",
+      "twitter": "https://twitter.com/richard03"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-8",
+    "name": "Barnett-Goodman",
+    "description": "Multi-layered hybrid alliance",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-8"
+      }
+    },
+    "website": "https://www.campbell.com/",
+    "email": "hernandezerin@boyer.com",
+    "phone": "(420)085-1388x27736",
+    "socials": {
+      "instagram": "https://instagram.com/hornerobert",
+      "facebook": "https://facebook.com/larry85",
+      "twitter": "https://twitter.com/fsanchez"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-9",
+    "name": "Rowe-Hernandez",
+    "description": "Function-based holistic strategy",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-9"
+      }
+    },
+    "website": "http://cunningham.com/",
+    "email": "laurienorton@castaneda.biz",
+    "phone": "120-465-7825x82462",
+    "socials": {
+      "instagram": "https://instagram.com/debra80",
+      "facebook": "https://facebook.com/jonescarolyn",
+      "twitter": "https://twitter.com/osbornmichael"
+    }
+  },
+  {
+    "_type": "vendor",
+    "_id": "vendor-10",
+    "name": "Whitney, Lawson and Lane",
+    "description": "Mandatory 5thgeneration benchmark",
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-vendor-10"
+      }
+    },
+    "website": "http://pennington.com/",
+    "email": "olsonwilliam@keller-holland.com",
+    "phone": "886-561-7437x56113",
+    "socials": {
+      "instagram": "https://instagram.com/lori58",
+      "facebook": "https://facebook.com/shortbrittany",
+      "twitter": "https://twitter.com/millsrobert"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "_type": "audience",
+    "_id": "audience-women",
+    "title": "Women"
+  },
+  {
+    "_type": "audience",
+    "_id": "audience-men",
+    "title": "Men"
+  },
+  {
+    "_type": "audience",
+    "_id": "audience-kids",
+    "title": "Kids"
+  },
+  {
+    "_type": "audience",
+    "_id": "audience-unisex",
+    "title": "Unisex"
+  }
+]
