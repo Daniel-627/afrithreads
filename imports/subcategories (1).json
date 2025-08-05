@@ -1,0 +1,146 @@
+[
+  {
+    "_type": "subcategory",
+    "title": "Maxi Dresses",
+    "slug": {
+      "_type": "slug",
+      "current": "maxi-dresses"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "clothing"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Short Dresses",
+    "slug": {
+      "_type": "slug",
+      "current": "short-dresses"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "clothing"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Wrap Skirts",
+    "slug": {
+      "_type": "slug",
+      "current": "wrap-skirts"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "clothing"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Sandals",
+    "slug": {
+      "_type": "slug",
+      "current": "sandals"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "footwear"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Headwraps",
+    "slug": {
+      "_type": "slug",
+      "current": "headwraps"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "headwear"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Playwear",
+    "slug": {
+      "_type": "slug",
+      "current": "playwear"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "kidswear"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Ponchos",
+    "slug": {
+      "_type": "slug",
+      "current": "ponchos"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "outerwear"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  },
+  {
+    "_type": "subcategory",
+    "title": "Throw Blankets",
+    "slug": {
+      "_type": "slug",
+      "current": "throw-blankets"
+    },
+    "category": {
+      "_type": "reference",
+      "_ref": "home-living"
+    },
+    "image": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-placeholder"
+      }
+    }
+  }
+]
