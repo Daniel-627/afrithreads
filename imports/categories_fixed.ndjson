@@ -1,0 +1,8 @@
+{"_id": "category-clothing", "_type": "category", "title": "Clothing", "slug": {"_type": "slug", "current": "clothing"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-clothing-placeholder"}}}
+{"_id": "category-footwear", "_type": "category", "title": "Footwear", "slug": {"_type": "slug", "current": "footwear"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-footwear-placeholder"}}}
+{"_id": "category-accessories", "_type": "category", "title": "Accessories", "slug": {"_type": "slug", "current": "accessories"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-accessories-placeholder"}}}
+{"_id": "category-home-decor", "_type": "category", "title": "Home Decor", "slug": {"_type": "slug", "current": "home-decor"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-home-decor-placeholder"}}}
+{"_id": "category-beauty", "_type": "category", "title": "Beauty", "slug": {"_type": "slug", "current": "beauty"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-beauty-placeholder"}}}
+{"_id": "category-prints", "_type": "category", "title": "Prints & Art", "slug": {"_type": "slug", "current": "prints-art"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-prints-placeholder"}}}
+{"_id": "category-kids", "_type": "category", "title": "Kids", "slug": {"_type": "slug", "current": "kids"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-kids-placeholder"}}}
+{"_id": "category-lifestyle", "_type": "category", "title": "Lifestyle", "slug": {"_type": "slug", "current": "lifestyle"}, "image": {"_type": "image", "asset": {"_type": "reference", "_ref": "image-lifestyle-placeholder"}}}
