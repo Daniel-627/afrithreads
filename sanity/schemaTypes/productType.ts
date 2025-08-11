@@ -23,16 +23,6 @@ export const productType = defineType({
       },
       validation: Rule => Rule.required(),
     }),
-    defineField({
-      name: 'status',
-      title: 'Status',
-      type: 'string',
-      options: {
-        list: ['Draft', 'Published', 'Archived'],
-        layout: 'dropdown',
-      },
-      initialValue: 'Draft',
-    }),
     // 💰 Pricing
     defineField({
       name: 'currentPrice',
