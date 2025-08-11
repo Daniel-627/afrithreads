@@ -33,18 +33,21 @@ export const productType = defineType({
       },
       initialValue: 'Draft',
     }),
+    // 💰 Pricing
     defineField({
-      name: 'price',
-      title: 'Base Price (KES)',
+      name: 'currentPrice',
+      title: 'Current Price (KES)',
       type: 'number',
+      description: 'Selling price (or lowest variant price if applicable)',
       validation: Rule => Rule.required().positive(),
     }),
     defineField({
-      name: 'priceMax',
-      title: 'Max Price (if variants)',
+      name: 'originalPrice',
+      title: 'Original Price (KES)',
       type: 'number',
-      description: 'Used for price filtering when product has multiple variants.',
+      description: 'Price before discount. Leave empty if no discount.',
     }),
+    // 📦 Stock Management
     defineField({
       name: 'stock',
       title: 'Total Stock',
@@ -112,12 +115,18 @@ export const productType = defineType({
     defineField({
       name: 'audience',
       title: 'Target Audience',
-      type: 'array',
-      of: [{ type: 'string' }],
+      type: 'string',
       options: {
-        list: ['Men', 'Women', 'Kids', 'Unisex'],
-        layout: 'tags',
+        list: [
+          { title: 'Men', value: 'men' },
+          { title: 'Women', value: 'women' },
+          { title: 'Kids', value: 'kids' },
+          { title: 'Unisex', value: 'unisex' },
+          { title: 'All', value: 'all' } // 👈 5th option
+        ],
+        layout: 'dropdown',
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'collection',

@@ -14,10 +14,17 @@ export const productVariantType = defineType({
       description: 'Unique code for internal tracking or fulfillment systems.',
     }),
     defineField({
-      name: 'price',
-      title: 'Price (KES)',
+      name: 'currentPrice',
+      title: 'Current Price (KES)',
       type: 'number',
+      description: 'Selling price (or lowest variant price if applicable)',
       validation: Rule => Rule.required().positive(),
+    }),
+    defineField({
+      name: 'originalPrice',
+      title: 'Original Price (KES)',
+      type: 'number',
+      description: 'Price before discount. Leave empty if no discount.',
     }),
     defineField({
       name: 'stock',
